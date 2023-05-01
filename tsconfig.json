@@ -25,7 +25,7 @@
     "paths": {
       "@config/*": ["config/*"],
       "@routes/*": ["routes/*"],
-      "@src/*": ["/*"]
+      "@src/*": ["*"]
     }
   },
   "exclude": ["node_modules", "**/__test__/*"],
