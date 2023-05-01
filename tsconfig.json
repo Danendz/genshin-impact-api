@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es6",
     "module": "commonjs",
-    "lib": ["dom", "es6", "es2017", "esnext.asynciterable"],
+    "lib": ["dom", "es6", "es2022", "esnext.asynciterable"],
     "sourceMap": true,
     "outDir": "./dist",
     "moduleResolution": "node",
@@ -22,11 +22,7 @@
     "resolveJsonModule": true,
     "baseUrl": "src",
     "rootDir": "src",
-    "paths": {
-      "@config/*": ["config/*"],
-      "@routes/*": ["routes/*"],
-      "@src/*": ["*"]
-    }
+    "paths": {}
   },
   "exclude": ["node_modules", "**/__test__/*"],
   "include": ["./src/**/*.ts"]

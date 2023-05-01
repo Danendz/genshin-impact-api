@@ -3,7 +3,7 @@ import koaBody from 'koa-body'
 import helmet from 'koa-helmet'
 import cors from '@koa/cors'
 import koaCompress from 'koa-compress'
-import router from '@routes/index'
+import router from 'routes/index'
 
 const app = new Koa()
 const port = process.env.PORT || 5000

@@ -1,7 +1,7 @@
-import router from '@config/router'
+import router from 'config/router'
 
-router.get('/', async (ctx) => {
-  ctx.body = { message: 'Hello World' }
-})
+import { getRoot } from 'controllers/root'
+
+router.get('/', getRoot)
 
 export default router
