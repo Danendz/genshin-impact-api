@@ -2,3 +2,5 @@
 node_modules/
 .editorconfig
 dist/
+.env.production
+yarn-error.log
