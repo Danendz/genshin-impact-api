@@ -8,6 +8,7 @@
   "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
   "rules": {
     "indent": ["error", 2],
+    "semi": ["error", "never"],
     "quotes": ["error", "single"],
     "@typescript-eslint/no-unused-vars": "error",
     "arrow-body-style": ["error", "as-needed"],
@@ -23,12 +24,6 @@
       "error",
       {
         "prefer": "type-imports"
-      }
-    ],
-    "no-restricted-imports": [
-      "error",
-      {
-        "patterns": ["../"]
       }
     ]
   },
