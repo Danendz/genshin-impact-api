@@ -7,7 +7,7 @@ import dotenv from 'dotenv-flow'
 import router from './routes/index'
 dotenv.config()
 
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 3000
 const app = new Koa()
 
 app.use(koaBody())
