@@ -2,7 +2,7 @@
   "apps": [
     {
       "name": "genshin-impact-api",
-      "script": "node -r ts-node/register/transpile-only -r tsconfig-paths/register dist/app/app.js",
+      "script": "node -r ts-node/register/transpile-only -r tsconfig-paths/register dist/app/",
       "args": "start"
     }
   ]
