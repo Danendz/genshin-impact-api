@@ -1,9 +1,0 @@
-{
-  "apps": [
-    {
-      "name": "genshin-impact-api",
-      "script": "node -r ts-node/register/transpile-only -r tsconfig-paths/register dist/index.js",
-      "args": "start"
-    }
-  ]
-}
