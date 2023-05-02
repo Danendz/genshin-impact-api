@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "pm2 start pm2config.json",
+    "start": "node -r ts-node/register/transpile-only -r tsconfig-paths/register dist/index.js",
     "build": "tsc --project tsconfig.build.json",
     "dev": "NODE_ENV=development nodemon",
     "test": "NODE_ENV=test jest",
