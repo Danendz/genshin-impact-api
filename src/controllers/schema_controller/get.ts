@@ -1,6 +1,6 @@
 import type { Context } from 'koa'
 import fn_get_schema from './functions/fn_get_schema'
-import { fn_api_error_message, fn_api_success_message } from 'shared/functions/fn_api_response'
+import { fn_api_error_message, fn_api_success_message } from '@shared/functions/fn_api_response'
 
 const getSchemas = async (ctx: Context) => {
   try {
@@ -9,7 +9,7 @@ const getSchemas = async (ctx: Context) => {
     ctx.status = 200
   } catch (e) {
     ctx.body = fn_api_error_message(e.message)
-    ctx.status = 400
+    ctx.status = 404
   }
 }
 
@@ -21,7 +21,7 @@ const getSchemaByName = async (ctx: Context) => {
     ctx.status = 200
   } catch (e) {
     ctx.body = fn_api_error_message(e.message)
-    ctx.status = 400
+    ctx.status = 404
   }
 }
 

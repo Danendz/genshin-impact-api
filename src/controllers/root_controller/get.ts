@@ -1,6 +1,6 @@
 import type { Context } from 'koa'
 import fn_get_data from './functions/fn_get_data'
-import { fn_api_error_message, fn_api_success_message } from 'shared/functions/fn_api_response'
+import { fn_api_error_message, fn_api_success_message } from '@shared/functions/fn_api_response'
 
 export const getRoot = async (ctx: Context) => {
   try {

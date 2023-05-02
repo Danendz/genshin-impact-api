@@ -1,6 +1,6 @@
-import { assetsSchema } from 'config/paths'
 import path from 'path'
-import { getDirList, getFileByPath } from 'shared/functions/fn_file_system'
+import { assetsSchema } from '@config/paths'
+import { getDirList, getFileByPath } from '@shared/functions/fn_file_system'
 import type { SchemaType } from '../types/schema'
 
 async function fn_get_schema(): Promise<string[]>
