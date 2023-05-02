@@ -16,7 +16,7 @@ app.use(cors())
 app.use(koaCompress())
 app.use(router())
 
-if (process.env.NODE_ENV !== 'debug') {
+if (process.env.NODE_ENV !== 'test') {
   app.listen(port, () => {
     console.log(`Running on http://localhost:${port}`)
   })
