@@ -1,6 +1,6 @@
 import fn_get_data from '@controllers/root_controller/functions/fn_get_data'
-import app from '@app/app'
-import { fn_api_success_message } from '@shared/functions/fn_api_response'h
+import app from '@app/index'
+import { fn_api_success_message } from '@shared/functions/fn_api_response'
 import request from 'supertest'
 
 describe('GET /', () => {

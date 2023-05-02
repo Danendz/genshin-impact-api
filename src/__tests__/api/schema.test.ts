@@ -1,5 +1,5 @@
 import fn_get_schema from '@controllers/schema_controller/functions/fn_get_schema'
-import app from '@app/app'
+import app from '@app/index'
 import { fn_api_error_message, fn_api_success_message } from '@shared/functions/fn_api_response'
 import request from 'supertest'
 
