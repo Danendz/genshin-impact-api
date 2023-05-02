@@ -1,6 +1,6 @@
-import fn_get_schema from 'controllers/schema_controller/functions/fn_get_schema'
-import app from 'app/app'
-import { fn_api_error_message, fn_api_success_message } from 'shared/functions/fn_api_response'
+import fn_get_schema from '@controllers/schema_controller/functions/fn_get_schema'
+import app from '@app/app'
+import { fn_api_error_message, fn_api_success_message } from '@shared/functions/fn_api_response'
 import request from 'supertest'
 
 describe('Get /schema', () => {
@@ -43,7 +43,7 @@ describe('Get /schema/:name', () => {
     const schemaName = 'test'
     const expectedSchema = fn_api_error_message('')
     const result = await request(server).get(`${url}/${schemaName}`)
-    expect(result.statusCode).toBe(400)
+    expect(result.statusCode).toBe(404)
     expect(result.body?.type).toBe(expectedSchema.type)
   })
 

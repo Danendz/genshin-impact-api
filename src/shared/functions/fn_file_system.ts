@@ -1,7 +1,7 @@
 import fs from 'fs/promises'
 import path from 'path'
 import fn_error_response from './fn_error_response'
-import type { SchemaType } from 'controllers/schema_controller/types/schema'
+import type { SchemaType } from '@controllers/schema_controller/types/schema'
 
 const getDirList = async (customPath: string): Promise<string[]> => {
   try {
