@@ -10,5 +10,5 @@
     "src/*"
   ],
   "ext": ".ts,.js",
-  "exec": "ts-node -r tsconfig-paths/register ./src/app/app.ts"
+  "exec": "ts-node -r tsconfig-paths/register ./src/"
 }
