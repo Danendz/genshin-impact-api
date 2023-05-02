@@ -2,6 +2,6 @@ import router from '@config/router'
 
 import { getRoot } from '@controllers/root_controller/get'
 
-router.get('/api', getRoot)
+router.get('/', getRoot)
 
 export default router
