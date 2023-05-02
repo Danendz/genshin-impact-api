@@ -1,4 +1,7 @@
 {
   "extends": "./tsconfig.json",
-  "exclude": ["**/*.test.ts"]
+  "exclude": ["**/*.test.ts"],
+  "ts-node": {
+    "transpileOnly": true
+  }
 }
