@@ -1,2 +1,1 @@
-// export default () => process.env.DEBUG
-export default () => true
+export default () => process.env.DEBUG;

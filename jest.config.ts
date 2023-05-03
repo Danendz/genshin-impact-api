@@ -1,6 +1,6 @@
-import type { Config } from '@jest/types'
-import { pathsToModuleNameMapper } from 'ts-jest'
-import { compilerOptions } from './tsconfig.json'
+import type { Config } from '@jest/types';
+import { pathsToModuleNameMapper } from 'ts-jest';
+import { compilerOptions } from './tsconfig.json';
 
 const config: Config.InitialOptions = {
   preset: 'ts-jest',
@@ -12,6 +12,6 @@ const config: Config.InitialOptions = {
   roots: ['<rootDir>'],
   modulePaths: [compilerOptions.baseUrl],
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths)
-}
+};
 
-export default config
+export default config;

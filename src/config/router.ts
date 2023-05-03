@@ -1,2 +1,2 @@
-import Router from 'koa-router'
-export default new Router()
+import Router from 'koa-router';
+export default new Router();
