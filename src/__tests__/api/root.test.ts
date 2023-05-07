@@ -1,4 +1,4 @@
-import fn_get_data from '@controllers/root_controller/functions/fn_get_data';
+import fn_get_data from '@src/controllers/root_controller/functions/fn_get_assets';
 import app from '@src/index';
 import { fn_api_success_message } from '@shared/functions/fn_api_response';
 import request from 'supertest';
