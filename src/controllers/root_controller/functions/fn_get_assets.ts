@@ -1,4 +1,4 @@
 import { assets } from '@config/paths';
-import { getDirList } from '@shared/functions/fn_file_system';
+import { getEntitiesList } from '@src/shared/functions/fn_entities';
 
-export default async () => await getDirList(assets());
+export default async () => await getEntitiesList(assets());

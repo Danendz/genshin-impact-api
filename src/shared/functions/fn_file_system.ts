@@ -1,7 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 import fn_error_response from './fn_error_response';
-import type { SchemaType } from '@controllers/schema_controller/types/schema';
+import type { EntityType } from '../types/entity_type';
 
 const getDirList = async (customPath: string): Promise<string[]> => {
   try {
@@ -12,7 +12,7 @@ const getDirList = async (customPath: string): Promise<string[]> => {
   }
 };
 
-const getFileByPath = async (filePath: string, fileName: string): Promise<SchemaType> => {
+const getFileByPath = async (filePath: string, fileName: string): Promise<EntityType> => {
   try {
     const buffer = await fs.readFile(path.join(filePath, fileName));
     return await JSON.parse(buffer.toString());
@@ -21,7 +21,24 @@ const getFileByPath = async (filePath: string, fileName: string): Promise<Schema
   }
 };
 
+const getFilesByPathIfExists = async (dirs: string[], filename: string): Promise<EntityType[]> => {
+  const files: Promise<EntityType>[] = [];
+  for (const dir of dirs) {
+    files.push(getFileByPath(dir, filename));
+  }
+  const obtainedFiles: EntityType[] = (await Promise.allSettled(files)).map((file) => {
+    if (file.status === 'fulfilled') {
+      return file.value;
+    }
+    return {};
+  });
+
+  return obtainedFiles;
+};
+
+
 export {
   getDirList,
-  getFileByPath
+  getFileByPath,
+  getFilesByPathIfExists
 };

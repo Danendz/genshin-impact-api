@@ -1,16 +1,14 @@
-import path from 'path';
 import { assetsSchema } from '@config/paths';
-import { getDirList, getFileByPath } from '@shared/functions/fn_file_system';
 import type { SchemaType } from '../types/schema';
+import { getEntitiesList, getEntityByPath } from '@src/shared/functions/fn_entities';
 
 async function fn_get_schema(): Promise<string[]>
-async function fn_get_schema(name: string): Promise<SchemaType>
-async function fn_get_schema(name?: string): Promise<string[] | SchemaType> {
-  if (!name) {
-    return await getDirList(assetsSchema());
+async function fn_get_schema(type: string): Promise<SchemaType>
+async function fn_get_schema(type?: string): Promise<string[] | SchemaType> {
+  if (!type) {
+    return await getEntitiesList(assetsSchema());
   }
-  const schemaPath = path.join(assetsSchema(), name);
-  return await getFileByPath(schemaPath, 'schema.json');
+  return await getEntityByPath(assetsSchema(), type, 'schema');
 }
 
 export default fn_get_schema;
