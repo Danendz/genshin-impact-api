@@ -5,8 +5,7 @@ import type { EntityType } from '../types/entity_type';
 
 const getDirList = async (customPath: string): Promise<string[]> => {
   try {
-    const dirs = await fs.readdir(customPath);
-    return dirs;
+    return await fs.readdir(customPath);
   } catch (e) {
     throw fn_error_response(e.message, 'No such directory');
   }

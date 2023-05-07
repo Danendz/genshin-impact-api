@@ -10,7 +10,7 @@ const getEntityByPath = async (dir: string, type: string, name: string): Promise
     return await getFileByPath(path.join(dir, type), `${name}.json`);
   } catch (err) {
     const availableEntities = (await getEntitiesList(dir)).join(', ');
-    throw fn_error_response(err.message, `No such entity. Available entities: [${availableEntities}]`);
+    throw fn_error_response(err.message, `No such entity. Available entities: ${availableEntities}`);
   }
 };
 
