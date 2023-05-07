@@ -12,12 +12,12 @@ const getDirList = async (customPath: string): Promise<string[]> => {
   }
 };
 
-const getFileByPath = async (filePath: string, fileName: string): Promise<EntityType> => {
+const getFileByPath = async (filepath: string, filename: string): Promise<EntityType> => {
   try {
-    const buffer = await fs.readFile(path.join(filePath, fileName));
+    const buffer = await fs.readFile(path.join(filepath, filename));
     return await JSON.parse(buffer.toString());
   } catch (e) {
-    throw fn_error_response(e.message, 'No such file or directory');
+    throw fn_error_response(e.message, 'No such file');
   }
 };
 
